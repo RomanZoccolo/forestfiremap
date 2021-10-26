@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>Satellite imagery of forest fire in Russia 2021 by Roman Sokolov</title>
+	<link rel='stylesheet' type='text/css' href='style.css'>
+	<script src='scripts.js'></script>
+</head>
+<body>
+	<menu class=lang>
+		<a href='#ru' title='По-русски'>🇷🇺</a> 
+		<a href='#en' title='In English'>🇬🇧</a>
+	</menu>
+	<section class=text>
+		<h1 class=en>Satellite imagery of forest fire in Russia 2021</h1>
+		<p class=en>
+			The area of forest fires in Russia has increased significantly over the past decade, catastrophic fires have become annual. In most cases, fires are caused by human carelessness. Every summer, residents of many cities and villages have to inhale smoke, which is harmful to their health and reduces their quality of life.
+		</p>
+		<p class=en>
+			After the smoke of Moscow due to peat fires in 2010, forest fire protection in the Moscow region has improved. But the smoke of much larger forest fires in Siberia and Karelia does not reach the capital city, and does not cause the same noticeable resonance.
+		</p>
+		<p class=en>
+			Here are satellite images of forest fires and smoke in Russia in 2021, each image has an infrared version. The infrared spectrum allows you to see the landscape hidden under the smoke:
+		</p>
+
+		<h1 class=ru>Спутниковые снимки лесных пожаров в России 2021</h1>
+		<p class=ru>
+			Площадь лесных пожаров в России существенно увеличилась за последнее десятилетие, катастрофические пожары стали ежегодными. В большинстве случаев, причиной возгораний является легкомысленная деятельность человека. Каждое лето жителям многих городов и деревень приходится вдыхать дым, который наносит вред здоровью и снижает качество их жизни.
+		</p>
+		<p class=ru>
+			Задымление Москвы из-за торфяных пожаров в 2010 году привело к тому, что лесная пожарная защита в Московской области улучшилась. Однако, дым значительно более крупных лесных пожаров в Сибири и Карелии не достигает столицы, и, в следствие, не вызывает настолько же заметного резонанса. 
+		</p>
+		<p class=ru>
+			Ниже представлены спутниковые снимки лесных пожаров и задымлений в 2021 году, каждый снимок имеет инфракрасную версию. Инфракрасный спектр позволяет увидеть ландшафт, скрытый под дымом:
+		</p>
+		
+		<legend>
+			<div class=col>
+				<div>
+					<img src='images/legend/grass.png'>
+					<span class=en>grass and shrubs are light green</span>
+					<span class=ru>трава и кустарник — светло-зелёные</span>
+				</div>
+				<div>
+					<img src='images/legend/forest.png'>
+					<span class=en>forest is dark green</span>
+					<span class=ru>лес — тёмно-зелёный</span>
+				</div>
+				<div>
+					<img src='images/legend/water.png'>
+					<span class=en>rivers and lakes are black</span>
+					<span class=ru>реки и озёра — чёрные</span>
+				</div>
+			</div>
+			<div class=col>
+				<div>
+					<img src='images/legend/burned.png'>
+					<span class=en>the burnt forest looks purple</span>
+					<span class=ru>сгоревший лес — фиолетовый</span>
+				</div>
+				<div>
+					<img src='images/legend/smoke.png'>
+					<span class=en>heavy smoke is blue</span>
+					<span class=ru>плотный дым — синий</span>
+				</div>
+				<div>
+					<img src='images/legend/fire.png'>
+					<span class=en>open fire glows from red to yellow</span>
+					<span class=ru>открытый огонь — от алого до светло жёлтого</span>
+				</div>
+			</div>
+		</legend>
+	</section>
+	<section class=text>
+		<p class=en>
+			Rivers, lakes and settlements are signed, the scale ruler is located in the lower right corner. Special attention is paid to Yakutia, which suffered the most from forest fires.
+		</p>
+		<p class=en>
+			To see the maps in the infrared spectrum, click the pictures.
+		</p>
+		<p class=ru>
+			На снимках подписаны реки, озёра и населенные пункты, в нижнем правом углу расположена линейка масштаба. Особое внимание в подборке уделено Якутии, наиболее пострадавшей от лесных пожаров.
+		</p>
+		<p class=ru>
+			Для просмотра снимка в инфракрасном спектре, нажмите на изображение. 
+		</p>
+	</section>
+	<section class=pictures>
+		<script type='template' id=tplPicture>
+			<figure>
+				<div class=picture>
+					<img class='normal ru' src='_picru_' title='Кликните, чтобы переключить в ИК-диапазон'>
+					<img class='ir ru' src='_picruir_' title='Кликните, чтобы переключить в диапазон видимого света'>
+					<img class='normal en' src='_picen_' title='Click to switch to IR mode'>
+					<img class='ir en' src='_picenir_' title='Click to switch to visible light mode'>
+				</div>
+				<figcaption class=ru>_descru_</figcaption>
+				<figcaption class=en>_descen_</figcaption>
+				<hr>
+			</figure>
+		</script>
+	</section>
+	<footer class=text>
+		<p class=ru>
+			Автор проекта: <a href='https://romansokolov.com' target=_blank>Роман Соколов</a>
+		</p>
+		<p class=ru>
+			Веб-разработка: <a href='https://www.facebook.com/1183992477' targe=_blank>Артём Романенко</a>
+		</p>
+		<p class=ru>
+			Проект основан на открытых данных <a href='https://apps.sentinel-hub.com' target=_blank>Sentinel Hub Playground</a>
+		</p>
+		<p class=en>
+			Author: <a href='https://romansokolov.com' target=_blank>Roman Sokolov</a>
+		</p>
+		<p class=en>
+			Web-development: <a href='https://www.facebook.com/1183992477' targe=_blank>Artyom Romanenko</a>
+		</p>
+		<p class=en>
+			The project is based on open data from <a href='https://apps.sentinel-hub.com' target=_blank>Sentinel Hub Playground</a>
+		</p>
+	</footer>
+</body>
+</html>
