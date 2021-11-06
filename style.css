@@ -182,6 +182,7 @@ section.pictures figure {
 
 footer {
 	width: var(--content-block-width);
+	max-width: var(--content-max-width);
 	font: var(--font-small);
 	padding-top: 2em;
 	border-top: 1px solid var(--border-color);
