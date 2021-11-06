@@ -7,6 +7,7 @@
 	--font-secondary: 300 0.8em/1.4 Helvetica, Arial, sans-serif;
 	--font-small: 300 0.6em/1.5 Helvetica, Arial, sans-serif;
 	--content-block-width: 75%;
+	--content-max-width: 900px;
 	--border-color: rgba(0, 0, 0, .2);
 }
 
@@ -86,6 +87,7 @@ menu.lang {
 
 section {
 	width: var(--content-block-width);
+	max-width: var(--content-max-width);
 }
 	
 	section > *:first:first-child {
