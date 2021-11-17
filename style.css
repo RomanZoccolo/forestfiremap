@@ -70,10 +70,18 @@ menu.lang {
 	flex-flow: row nowrap;
 	line-height: 1.5em;
 }
+	menu.lang svg {
+		width: 1em;
+	}
+
 	menu.lang a {
 		opacity: .7;
 		text-decoration: none;
 		transition: opacity .3s;
+	}
+
+	menu.lang a:first-child {
+		margin-right: .3em;
 	}
 
 	menu.lang a:hover {
