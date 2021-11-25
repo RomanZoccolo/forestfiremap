@@ -117,12 +117,13 @@ legend {
 	}
 
 	legend .columns {
-		columns: 2 200px;
+		columns: 2 auto;
 		column-gap: 2em;
-		justify-content: center;
 	}
 
 		legend .columns > div {
+			break-inside: avoid;
+			page-break-inside: avoid;
 			margin-bottom: 1em;
 			display: flex;
 			flex-direction: row;
