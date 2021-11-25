@@ -3,6 +3,7 @@
 	--bg-main: #eee;
 	--text-main: #222;
 	--text-link: #444;
+	--text-muted: #555;
 	--font-main: 300 1rem/1.7rem Helvetica, Arial, sans-serif;
 	--font-secondary: 300 0.8em/1.4 Helvetica, Arial, sans-serif;
 	--font-small: 300 0.6em/1.5 Helvetica, Arial, sans-serif;
@@ -16,6 +17,7 @@
 		--bg-main: #222;
 		--text-main: #ddd;
 		--text-link: #eee;
+		--text-muted: #999;
 		--border-color: rgba(255, 255, 255, .2);
 	}
 }
@@ -146,6 +148,55 @@ section.pictures figure {
 	width: 100%;
 	margin: 0;
 }
+	section.pictures .picture-header {
+		font-size: .8em;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+	}
+		section.pictures .picture-header .picture-type-selector {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+
+			section.pictures figure .picture-header label {
+				opacity: .5;
+				transition: opacity .2s;
+				cursor: pointer;
+			}
+
+			section.pictures figure.ir .picture-header label.ir,
+			section.pictures figure:not(.ir) .picture-header label.normal {
+				opacity: 1;
+				cursor: default;
+			}
+
+			section.pictures figure .picture-header .toggle {
+				display: flex;
+				flex-flow: row nowrap;
+				margin: 0 5px;
+
+				border: 1px solid var(--text-muted);
+				padding: 2px;
+
+				height: 5px;
+				width: 20px;
+			}
+				section.pictures figure .picture-header .toggle span {
+					display: block;
+					width: 50%;
+					background-color: var(--text-main);
+
+					margin-left: 0;
+					transition: margin-left .3s;
+				}
+
+				section.pictures figure.ir .picture-header .toggle span {
+					margin-left: 50%;
+				}
 
 	section.pictures figure .picture {
 		cursor: pointer;

@@ -115,11 +115,22 @@
 	<section class=pictures>
 		<script type='template' id=tplPicture>
 			<figure>
+				<div class=picture-header>
+					<div class=picture-type-selector>
+						<label class='ru normal'>видимый свет</label>
+						<label class='en normal'>visible light</label>
+						<span class=toggle>
+							<span></span>
+						</span>
+						<label class='ru ir'>инфракрасный</label>
+						<label class='en ir'>infrared</label>
+					</div>
+				</div>
 				<div class=picture>
-					<img class='normal ru' src='_picru_' title='Кликните, чтобы переключить в ИК-диапазон'>
-					<img class='ir ru' src='_picruir_' title='Кликните, чтобы переключить в диапазон видимого света'>
-					<img class='normal en' src='_picen_' title='Click to switch to IR mode'>
-					<img class='ir en' src='_picenir_' title='Click to switch to visible light mode'>
+					<img class='ru normal' src='_picru_' title='Кликните, чтобы переключить в ИК-диапазон'>
+					<img class='ru ir' src='_picruir_' title='Кликните, чтобы переключить в диапазон видимого света'>
+					<img class='en normal' src='_picen_' title='Click to switch to IR mode'>
+					<img class='en ir' src='_picenir_' title='Click to switch to visible light mode'>
 				</div>
 				<figcaption class=ru>_descru_</figcaption>
 				<figcaption class=en>_descen_</figcaption>
