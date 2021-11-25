@@ -119,14 +119,14 @@ legend {
 	}
 
 	legend .columns {
-		columns: 2 auto;
+		columns: 2 300px;
 		column-gap: 2em;
 	}
 
 		legend .columns > div {
 			break-inside: avoid;
 			page-break-inside: avoid;
-			margin-bottom: 1em;
+			padding-bottom: 1em; /* not margin because safari is 💩 */
 			display: flex;
 			flex-direction: row;
 			text-align: left;
