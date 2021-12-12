@@ -26,6 +26,10 @@
 	display: none;
 }
 
+.show-on-mobile {
+	display: none;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -161,6 +165,9 @@ section.pictures figure {
 			align-items: center;
 			cursor: pointer;
 			margin-left: 1em;
+		}
+		section.pictures .picture-header .picture-toggle:first-child {
+			margin-left: 0;
 		}
 
 			section.pictures figure .picture-toggle label {
@@ -299,6 +306,14 @@ footer {
 		font-size: 16px;
 	}
 
+	.hide-on-mobile {
+		display: none;
+	}
+
+	.show-on-mobile {
+		display: unset;
+	}
+
 	menu.lang {	
 		flex-direction: column;
 		line-height: 1.8em;
@@ -306,6 +321,10 @@ footer {
 
 	h1, h2, h3 {
 		font-size: 1.2em;
+	}
+
+	section.pictures .picture-header {
+		font-size: .6em;
 	}
 }
 
