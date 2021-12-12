@@ -98,21 +98,21 @@ const pictures = [
 		file: '08-bur',
 		description: {
 			en:'A forest fire near the cluster of the Yarakt petroleum field, the Irkutsk Region. Deforestation looks like light-green spots.',
-			ru:'Лесной пожар рядом с группой скважин Ярактинского нефтегазоконденсатного месторождения, Иркутская область. Светло-зелеными пятнами на снимке различимы лесные вырубки.'
+			ru:'Лесной пожар к северу от скважин Ярактинского нефтегазоконденсатного месторождения, Иркутская область. Лесные вырубки выглядят как светло-зеленые пятна.'
 		},
 		moscowScale: 'moscow-10km-3'
 	}, {
 		file: '09-irkutskaya',
 		description: {
 			en:'A cluster of the Verkhnechonsk petroleum field and surrounding forest on fire, the Irkutsk Region',
-			ru:'Пожар охвативший территорию группы скважин Верхнечонского нефтегазоконденсатного месторождения и окружающий лес, Иркутская область'
+			ru:'Пожар охвативший территорию скважин нефтегазоконденсатного месторождения и окружающий лес у реки Нижняя Тунгуска, Иркутская область'
 		},
 		moscowScale: 'moscow-3km'
 	}, {
 		file: '10-angara',
 		description: {
-			en:'Smoke from forest fires over deforestation spots near the Angara River, Irkutsk Oblast',
-			ru:'Дым от лесных пожаров над лесными вырубками рядом с рекой Ангара, Иркутская область'
+			en:'Smoke from forest fires over deforestation spots near the Angara River, Krasnoyarsk Oblast',
+			ru:'Дым от лесных пожаров над лесными вырубками рядом с рекой Ангара, Красноярская область'
 		},
 		moscowScale: 'moscow-10km-3'
 	}
