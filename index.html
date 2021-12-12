@@ -116,7 +116,14 @@
 		<script type='template' id=tplPicture>
 			<figure>
 				<div class=picture-header>
-					<div class=picture-type-selector>
+					<div class='picture-toggle moscow-overlay'>
+						<span class='toggle checkbox'>
+							<span></span>
+						</span>
+						<label class='ru'>сравнить с Москвой</label>
+						<label class='en'>Moscow overlay</label>
+					</div>
+					<div class='picture-toggle type-selector'>
 						<label class='ru normal'>видимый свет</label>
 						<label class='en normal'>visible light</label>
 						<span class=toggle>
@@ -127,6 +134,7 @@
 					</div>
 				</div>
 				<div class=picture>
+					<div class='moscow _moscow_scale_'></div>
 					<img class='ru normal' src='_picru_' title='Кликните, чтобы переключить в ИК-диапазон'>
 					<img class='ru ir' src='_picruir_' title='Кликните, чтобы переключить в диапазон видимого света'>
 					<img class='en normal' src='_picen_' title='Click to switch to IR mode'>

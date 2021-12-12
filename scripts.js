@@ -49,62 +49,72 @@ const pictures = [
 		file: '01-syamozero',
 		description: {
 			en:'Forest fire near Lake Syamozero, the Republic of Karelia',
-			ru:'Пожар рядом с озером Сямозеро, Карелия',
-		}
+			ru:'Пожар рядом с озером Сямозеро, Карелия'
+		},
+		moscowScale: 'moscow-5km-1'
 	}, {
 		file: '02-megino-aldan',
 		description: {
 			en:'Forest fire near the Aldan River, the Republic of Sakha (Yakutia)',
-			ru:'Лесной пожар рядом с рекой Алдан, Республика Саха (Якутия)',
-		}
+			ru:'Лесной пожар рядом с рекой Алдан, Республика Саха (Якутия)'
+		},
+		moscowScale: 'moscow-5km-1'
 	}, {
 		file: '03-sitte',
 		description: {
 			en:'The Sitte village surrounded by fire, near the Lena River, the Republic of Sakha (Yakutia)',
-			ru:'Окруженный пожарами посёлок Ситте недалеко от реки Лена, Республика Саха (Якутия)',
-		}
+			ru:'Окруженный пожарами посёлок Ситте недалеко от реки Лена, Республика Саха (Якутия)'
+		},
+		moscowScale: 'moscow-5km-2'
 	}, {
 		file: '04-yakutsk',
 		description: {
 			en:'The city of Yakutsk in the smoke of forest fires, the Republic of Sakha (Yakutia). On days of dense smoke, according to IQAir, air pollution in Yakutsk exceeded the parameters recommended by the World Health Organization more than hundred times.',
-			ru:'Город Якутск в дыму лесных пожаров, Республика Саха (Якутия). В дни плотного задымления, по данным IQAir, загрязнение воздуха в Якутске превысило параметры, рекомендуемые Всемирной Организацией здравоохранения (ВОЗ), более чем в сто раз.',
-		}
+			ru:'Город Якутск в дыму лесных пожаров, Республика Саха (Якутия). В дни плотного задымления, по данным IQAir, загрязнение воздуха в Якутске превысило параметры, рекомендуемые Всемирной Организацией здравоохранения (ВОЗ), более чем в сто раз.'
+		},
+		moscowScale: 'moscow-5km-2'
 	}, {
 		file: '05-mirniy-svetliy',
 		description: {
 			en:'The surroundings of the city of Mirny on fire, the Republic of Sakha (Yakutia)',
-			ru:'Окрестности города Мирный охвачены огнём, Республика Саха (Якутия)',
-		}
+			ru:'Окрестности города Мирный охвачены огнём, Республика Саха (Якутия)'
+		},
+		moscowScale: 'moscow-10km-1'
 	}, {
 		file: '06-sangar',
 		description: {
 			en:'Forest fires on both sides of the Lena River, the Republic of Sakha (Yakutia). The Verkhoyansk ridge can be seen on the right side of the image.',
-			ru:'Лесные пожары на обоих берегах реки Лена, Республика Саха (Якутия). На правой части снимка видны склоны Верхоянского хребта.',
-		}
+			ru:'Лесные пожары на обоих берегах реки Лена, Республика Саха (Якутия). На правой части снимка видны склоны Верхоянского хребта.'
+		},
+		moscowScale: 'moscow-10km-2'
 	}, {
 		file: '07-byas-kyol',
 		description: {
 			en:'Byas-Kyuel village suffering from forest fire, the Republic of Sakha (Yakutia)',
 			ru:'Огонь лесных пожаров перекинулся на посёлок Бясь-Кюель, Республика Саха (Якутия)'
-		}
+		},
+		moscowScale: 'moscow-5km-2'
 	}, {
 		file: '08-bur',
 		description: {
 			en:'A forest fire near the cluster of the Yarakt petroleum field, the Irkutsk Region. Deforestation looks like light-green spots.',
 			ru:'Лесной пожар рядом с группой скважин Ярактинского нефтегазоконденсатного месторождения, Иркутская область. Светло-зелеными пятнами на снимке различимы лесные вырубки.'
-		}
+		},
+		moscowScale: 'moscow-10km-3'
 	}, {
 		file: '09-irkutskaya',
 		description: {
 			en:'A cluster of the Verkhnechonsk petroleum field and surrounding forest on fire, the Irkutsk Region',
 			ru:'Пожар охвативший территорию группы скважин Верхнечонского нефтегазоконденсатного месторождения и окружающий лес, Иркутская область'
-		}
+		},
+		moscowScale: 'moscow-3km'
 	}, {
 		file: '10-angara',
 		description: {
 			en:'Smoke from forest fires over deforestation spots near the Angara River, Irkutsk Oblast',
 			ru:'Дым от лесных пожаров над лесными вырубками рядом с рекой Ангара, Иркутская область'
-		}
+		},
+		moscowScale: 'moscow-10km-3'
 	}
 ];
 
@@ -122,10 +132,18 @@ function createPics() {
 		'_picen_': `images/en/${pic.file}.jpg`,
 		'_picenir_': `images/en/${pic.file}-ir.jpg`, 
 		'_descru_': pic.description.ru,
-		'_descen_': pic.description.en
+		'_descen_': pic.description.en,
+		'_moscow_scale_': pic.moscowScale
 	})).join('');
 
-	$$('section.pictures figure').forEach(e => $on(e, 'click', () => e.classList.toggle('ir')));
+	$$('section.pictures .picture')
+		.forEach(e => $on(e, 'click', () => e.parentElement.classList.toggle('ir')));
+
+	$$('section.pictures .picture-toggle.type-selector')
+		.forEach(e => $on(e, 'click', () => e.parentElement.parentElement.classList.toggle('ir')));
+
+	$$('section.pictures .picture-toggle.moscow-overlay')
+		.forEach(e => $on(e, 'click', () => e.parentElement.parentElement.classList.toggle('moscow')));
 }
 
 // Page init

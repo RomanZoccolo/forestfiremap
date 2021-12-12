@@ -154,27 +154,28 @@ section.pictures figure {
 		flex-flow: row nowrap;
 		justify-content: flex-end;
 	}
-		section.pictures .picture-header .picture-type-selector {
+		section.pictures .picture-header .picture-toggle {
 			display: flex;
 			flex-flow: row nowrap;
 			justify-content: center;
 			align-items: center;
 			cursor: pointer;
+			margin-left: 1em;
 		}
 
-			section.pictures figure .picture-header label {
+			section.pictures figure .picture-toggle label {
 				opacity: .5;
 				transition: opacity .2s;
 				cursor: pointer;
 			}
 
-			section.pictures figure.ir .picture-header label.ir,
-			section.pictures figure:not(.ir) .picture-header label.normal {
+			section.pictures figure.ir .picture-toggle.type-selector label.ir,
+			section.pictures figure:not(.ir) .picture-toggle.type-selector label.normal {
 				opacity: 1;
 				cursor: default;
 			}
 
-			section.pictures figure .picture-header .toggle {
+			section.pictures figure .picture-toggle .toggle {
 				display: flex;
 				flex-flow: row nowrap;
 				margin: 0 5px;
@@ -182,10 +183,16 @@ section.pictures figure {
 				border: 1px solid var(--text-muted);
 				padding: 2px;
 
-				height: 5px;
-				width: 20px;
+				height: .4em;
+				width: 1.5em;
 			}
-				section.pictures figure .picture-header .toggle span {
+			
+			section.pictures figure .picture-toggle .toggle.checkbox {
+				height: .5em;
+				width: .5em;
+			}
+
+				section.pictures figure .picture-toggle .toggle span {
 					display: block;
 					width: 50%;
 					background-color: var(--text-main);
@@ -194,7 +201,17 @@ section.pictures figure {
 					transition: margin-left .3s;
 				}
 
-				section.pictures figure.ir .picture-header .toggle span {
+				section.pictures figure .picture-toggle .toggle.checkbox span {
+					width: 100%;
+					opacity: 0;
+				}
+
+				section.pictures figure.moscow .picture-toggle.moscow-overlay .toggle.checkbox span, 
+				section.pictures figure.moscow .picture-toggle.moscow-overlay label {
+					opacity: 1;
+				}
+
+				section.pictures figure.ir .picture-toggle.type-selector .toggle span {
 					margin-left: 50%;
 				}
 
@@ -203,20 +220,34 @@ section.pictures figure {
 		display: grid;
 		grid-template-columns: 1fr;
 		max-width: 100%;
+		overflow: hidden;
 	}
 
-	section.pictures figure img {
+	section.pictures figure .picture img,
+	section.pictures figure .picture div {
 		grid-area: 1 / 1 / 2 / 2;
 		width: 100%;
 	}
 
-	section.pictures figure img.ir {
+	section.pictures figure div.moscow {
+		width: 100%;
+		height: 100%;
+		background: url(images/moscow.svg) center no-repeat;
+		z-index: 1000;
+	}
+
+	section.pictures figure img.ir,
+	section.pictures figure div.moscow {
 		opacity: 0;
 		transition: opacity .3s;
 	}
 
-	section.pictures figure.ir img.ir{
+	section.pictures figure.ir img.ir {
 		opacity: 1;
+	}
+
+	section.pictures figure.moscow div.moscow {
+		opacity: .614742;
 	}
 
 	section.pictures figure figcaption {
@@ -276,4 +307,23 @@ footer {
 	h1, h2, h3 {
 		font-size: 1.2em;
 	}
+}
+
+.moscow-3km {
+	background-size: 82% !important;
+}
+.moscow-5km-1 {
+	background-size: 68% !important;
+}
+.moscow-5km-2 {
+	background-size: 95% !important;
+}
+.moscow-10km-1 {
+	background-size: 16% !important;
+}
+.moscow-10km-2 {
+	background-size: 25.5% !important;
+}
+.moscow-10km-3 {
+	background-size: 20% !important;
 }
