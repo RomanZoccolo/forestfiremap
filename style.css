@@ -222,7 +222,7 @@ section.pictures figure {
 					margin-left: 50%;
 				}
 
-	section.pictures figure .picture {
+	section.pictures figure .picture-set {
 		cursor: pointer;
 		display: grid;
 		grid-template-columns: 1fr;
@@ -230,8 +230,8 @@ section.pictures figure {
 		overflow: hidden;
 	}
 
-	section.pictures figure .picture img,
-	section.pictures figure .picture div {
+	section.pictures figure .picture-set img,
+	section.pictures figure .picture-set div {
 		grid-area: 1 / 1 / 2 / 2;
 		width: 100%;
 	}
@@ -243,13 +243,13 @@ section.pictures figure {
 		z-index: 1000;
 	}
 
-	section.pictures figure img.ir,
+	section.pictures figure .picture-set img.ir,
 	section.pictures figure div.moscow {
 		opacity: 0;
 		transition: opacity .3s;
 	}
 
-	section.pictures figure.ir img.ir {
+	section.pictures figure.ir .picture-set img.ir {
 		opacity: 1;
 	}
 

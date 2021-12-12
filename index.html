@@ -120,7 +120,10 @@
 						<span class='toggle checkbox'>
 							<span></span>
 						</span>
-						<label class='ru'><span class=hide-on-mobile>сравнить с Москвой</span><span class=show-on-mobile>Москва</span></label>
+						<label class='ru'>
+							<span class=hide-on-mobile>сравнить с Москвой</span>
+							<span class=show-on-mobile>Москва</span>
+						</label>
 						<label class='en'>Moscow overlay</label>
 					</div>
 					<div class='picture-toggle type-selector'>
@@ -133,12 +136,32 @@
 						<label class='en ir'>infrared</label>
 					</div>
 				</div>
-				<div class=picture>
+				<div class=picture-set>
 					<div class='moscow _moscow_scale_'></div>
-					<img class='ru normal' src='_picru_' title='Кликните, чтобы переключить в ИК-диапазон'>
-					<img class='ru ir' src='_picruir_' title='Кликните, чтобы переключить в диапазон видимого света'>
-					<img class='en normal' src='_picen_' title='Click to switch to IR mode'>
-					<img class='en ir' src='_picenir_' title='Click to switch to visible light mode'>
+					<img class='ru normal' 
+						srcset='images/ru/1k/_pic_.jpg 1000w,
+								images/ru/2k/_pic_.jpg 2000w'
+						sizes='(max-width: 1299px) 1000px, (min-width: 1300px) 2000px'
+						src='images/ru/1k/_pic_.jpg'
+						title='Кликните, чтобы переключить в ИК-диапазон'>
+					<img class='ru ir' 
+						srcset='images/ru/1k/_picir_.jpg 1000w,
+								images/ru/2k/_picir_.jpg 2000w'
+						sizes='(max-width: 1299px) 1000px, (min-width: 1300px) 2000px'
+						src='images/ru/1k/_picir_.jpg'
+						title='Кликните, чтобы переключить в диапазон видимого света'>
+					<img class='en normal' 
+						srcset='images/en/1k/_pic_.jpg 1000w,
+								images/en/2k/_pic_.jpg 2000w'
+						sizes='(max-width: 1299px) 1000px, (min-width: 1300px) 2000px'
+						src='images/en/1k/_pic_.jpg'
+						title='Click to switch to IR mode'>
+					<img class='en ir' 
+						srcset='images/en/1k/_picir_.jpg 1000w,
+								images/en/2k/_picir_.jpg 2000w'
+						sizes='(max-width: 1299px) 1000px, (min-width: 1300px) 2000px'
+						src='images/en/1k/_picir_.jpg'
+						title='Click to switch to visible light mode'>
 				</div>
 				<figcaption class=ru>_descru_</figcaption>
 				<figcaption class=en>_descen_</figcaption>

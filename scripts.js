@@ -127,16 +127,14 @@ function createPics() {
 	let tpl = $('#tplPicture').innerText;
 
 	$('section.pictures').innerHTML = pictures.map(pic => replaceAll(tpl, {
-		'_picru_': `images/ru/${pic.file}.jpg`,
-		'_picruir_': `images/ru/${pic.file}-ir.jpg`,
-		'_picen_': `images/en/${pic.file}.jpg`,
-		'_picenir_': `images/en/${pic.file}-ir.jpg`, 
+		'_pic_': pic.file,
+		'_picir_': pic.file + '-ir',
 		'_descru_': pic.description.ru,
 		'_descen_': pic.description.en,
 		'_moscow_scale_': pic.moscowScale
 	})).join('');
 
-	$$('section.pictures .picture')
+	$$('section.pictures .picture-set')
 		.forEach(e => $on(e, 'click', () => e.parentElement.classList.toggle('ir')));
 
 	$$('section.pictures .picture-toggle.type-selector')
