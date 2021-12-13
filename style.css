@@ -62,6 +62,10 @@ h2 {
 	font-size: 1.3em;
 }
 
+svg.icon {
+	width: 1em;
+	vertical-align: -0.1em;
+}
 a {
 	color: var(--text-link);
 }
@@ -76,10 +80,6 @@ menu.lang {
 	flex-flow: row nowrap;
 	line-height: 1.5em;
 }
-	menu.lang svg {
-		width: 1em;
-	}
-
 	menu.lang a {
 		opacity: .7;
 		text-decoration: none;
