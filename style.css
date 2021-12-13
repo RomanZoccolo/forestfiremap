@@ -62,16 +62,29 @@ h2 {
 	font-size: 1.3em;
 }
 
+small {
+	font-size: .7em;
+}
+
 svg.icon {
 	width: 1em;
 	vertical-align: -0.1em;
 }
+
+svg.text-colored {
+	fill: var(--text-main);
+}
+
 a {
 	color: var(--text-link);
 }
 	a:focus, a.muted {
 		color: var(--text-main);
 	}
+
+a.clear {
+	text-decoration: none;
+}
 
 menu.lang {
 	position: fixed;
@@ -261,6 +274,11 @@ section.pictures figure {
 		font: var(--font-secondary);
 		margin-top: .7em;
 		text-align: center;
+	}
+
+	.map-link {
+		white-space: nowrap;
+		margin-left: .5em;
 	}
 
 	section.pictures figure hr {
