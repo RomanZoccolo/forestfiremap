@@ -112,7 +112,7 @@ const pictures = [
 	}, {
 		file: '09-irkutskaya',
 		description: {
-			en:'A cluster of the Verkhnechonsk petroleum field and surrounding forest on fire, the Irkutsk Region',
+			en:'A cluster of a petroleum field and surrounding forest on fire, the Irkutsk Region',
 			ru:'Пожар охвативший территорию скважин нефтегазоконденсатного месторождения и окружающий лес у реки Нижняя Тунгуска, Иркутская область'
 		},
 		moscowScale: 'moscow-3km',
