@@ -43,6 +43,15 @@ function checkLanguage(checkSystem = false) {
 	}
 }
 
+// redirect to Russia, since it's only about Russia at the moment
+// and Roman wanted it to be present in the address
+
+function indexToRussia() {
+	if(!window.location.pathname.includes('russia'))
+		history.pushState(false, false, '/russia');
+}
+
+
 // Picture data 
 const pictures = [
 	{
@@ -164,5 +173,6 @@ onDocumentReady(() => {
 	checkLanguage(true); // true => check system lang
 	$on(window, 'popstate', () => checkLanguage()); // a.func becasue we don't want any args, to not check the sys lang
 
+	indexToRussia();	
 	console.log('loaded');
 });
